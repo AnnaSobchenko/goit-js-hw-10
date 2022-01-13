@@ -22,3 +22,9 @@ getDataServer(baseUrl).then(data => {
     .join('');
   refs.menuList.innerHTML = markup;
 });
+
+document.addEventListener('click', event => {
+  if (event.target.nodeName !== 'A') return;
+  event.preventDefault();
+  getDataServer(event.target.href).then(console.log);
+});
