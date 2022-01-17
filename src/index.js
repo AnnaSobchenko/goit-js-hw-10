@@ -28,22 +28,22 @@ function getCountries() {
 }
 
 function createMarkup(arrayCountry) {
-  console.log(arrayCountry);
+  //   console.log(arrayCountry);
   if (arrayCountry.length > 10) {
     Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
     return;
   } else if (arrayCountry.length >= 2 && arrayCountry.length <= 10) {
-    console.log('2-10');
+    // console.log('2-10');
     const markup = CountryItem(arrayCountry);
     refs.listCountryEl.insertAdjacentHTML('beforeend', markup);
     refs.infoCountryEl.innerHTML = '';
     return;
   }
   const markup = CountryEl(arrayCountry[0]);
-  console.log(markup);
-  console.log(refs.infoCountryEl);
+  //   console.log(markup);
+  //   console.log(refs.infoCountryEl);
   refs.listCountryEl.innerHTML = '';
   refs.infoCountryEl.innerHTML = '';
   refs.infoCountryEl.insertAdjacentHTML('beforeend', markup);
-  console.log('Country');
+  //   console.log('Country');
 }
