@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import './css/styles.css';
 import debounce from 'lodash.debounce';
 import fetchCountries from './fetchCountries';
@@ -29,7 +30,7 @@ function getCountries() {
 function createMarkup(arrayCountry) {
   console.log(arrayCountry);
   if (arrayCountry.length > 10) {
-    console.log('Too many matches found. Please enter a more specific name.');
+    Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
     return;
   } else if (arrayCountry.length >= 2 && arrayCountry.length <= 10) {
     console.log('2-10');
@@ -42,6 +43,7 @@ function createMarkup(arrayCountry) {
   console.log(markup);
   console.log(refs.infoCountryEl);
   refs.listCountryEl.innerHTML = '';
+  refs.infoCountryEl.innerHTML = '';
   refs.infoCountryEl.insertAdjacentHTML('beforeend', markup);
   console.log('Country');
 }

@@ -18,7 +18,10 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 } */
-
+li {
+  text-decoration: none;
+  list-style: none;
+}
 header {
   background-color: darkgrey;
   height: 100px;
@@ -62,4 +65,51 @@ main ul {
 .svg-flag {
   width: 50px;
   height: auto;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.item {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.country-name {
+  margin: 0;
+}
+.country-title {
+  font-size: 35px;
+  margin: 0 0 0px 10px;
+}
+
+.country-information {
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.country-info-caption {
+  font-weight: 500;
+}
+
+.lang-info {
+  font-size: 25px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.lang-list {
+  display: flex;
+
+  margin: 0;
+}
+
+.country-languages {
+  display: flex;
+}
+
+.flag-caption {
+  display: flex;
+  margin-bottom: 20px;
 }
